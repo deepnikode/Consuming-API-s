@@ -18,7 +18,7 @@ class WebClientStockClientIntegrationTest {
     {
 
         WebClientStockClient webClientStockClient = new WebClientStockClient(webClient);
-        Flux<StockPrize> prices = webClientStockClient.pricesFor("SYMBOL");
+        Flux<Users> prices = webClientStockClient.getAllUsers();
 
         Assertions.assertNotNull(prices);
         Assertions.assertTrue(prices.take(5).count().block() > 0);
