@@ -17,9 +17,9 @@ public class StockClientApp extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            scene = new Scene(loadFXML("user_view"), 640, 480);
+            scene = new Scene(loadFXML("user_view1"), 640, 480);
             stage.setScene(scene);
-            stage.setTitle("User List");
+            stage.setTitle("LOGIN");
             stage.show();
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Failed to load FXML", e);

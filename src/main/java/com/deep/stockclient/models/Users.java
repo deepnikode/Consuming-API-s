@@ -1,4 +1,4 @@
-package com.deep.stockclient;
+package com.deep.stockclient.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -34,7 +34,7 @@ public class Users {
     @JsonProperty("is_active")
     private boolean isActive;
 
-    @JsonProperty("colour_pallate") // Note the JSON key name
+    @JsonProperty("colour_pallate")
     private String colourPalette;
 
     @JsonProperty("image")
