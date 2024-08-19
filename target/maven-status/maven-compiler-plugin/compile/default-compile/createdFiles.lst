@@ -1,0 +1,6 @@
+com/deep/stockclient/UserController.class
+com/deep/stockclient/Users.class
+com/deep/stockclient/config/AppConfig.class
+com/deep/stockclient/StockClientApp.class
+com/deep/stockclient/WebClientStockClient.class
+com/deep/stockclient/ApiResponse.class
