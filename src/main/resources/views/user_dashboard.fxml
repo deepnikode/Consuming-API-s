@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.deep.stockclient.controllers.UserController">
+
+
+
+    <!-- User Details Section -->
+    <VBox>
+        <HBox spacing="10">
+            <Label text="ID:" />
+            <Label fx:id="idLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Name:" />
+            <Label fx:id="nameLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Employee Code:" />
+            <Label fx:id="employeeCodeLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Role:" />
+            <Label fx:id="roleLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Gender:" />
+            <Label fx:id="genderLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Email:" />
+            <Label fx:id="emailLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Personal Email:" />
+            <Label fx:id="personalEmailLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="PAN Number:" />
+            <Label fx:id="panNumberLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Aadhar Number:" />
+            <Label fx:id="adharNumberLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Phone:" />
+            <Label fx:id="phoneLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Alternate Phone:" />
+            <Label fx:id="alternatePhoneLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Current Address:" />
+            <Label fx:id="currentAddressLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Permanent Address:" />
+            <Label fx:id="permanentAddressLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Designation:" />
+            <Label fx:id="designationLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Default Salary:" />
+            <Label fx:id="defaultSalaryLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Joining Date:" />
+            <Label fx:id="joininDateLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Date of Birth:" />
+            <Label fx:id="dateOfBirthLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Email Verified At:" />
+            <Label fx:id="emailVerifiedAtLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Active:" />
+            <Label fx:id="isActiveLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Colour Palette:" />
+            <Label fx:id="colourPaletteLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Image:" />
+            <Label fx:id="imageLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="PAN Document:" />
+            <Label fx:id="panDocumentLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Aadhar Document:" />
+            <Label fx:id="adharDocumentLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="API Token:" />
+            <Label fx:id="apiTokenLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Created At:" />
+            <Label fx:id="createdAtLabel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Updated At:" />
+            <Label fx:id="updatedAtLabel"/>
+        </HBox>
+    </VBox>
+
+    <!-- Projects List -->
+    <VBox>
+        <Label text="Projects:"/>
+        <ListView fx:id="projectsListView" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</VBox>

@@ -17,9 +17,11 @@ public class StockClientApp extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            scene = new Scene(loadFXML("user_view"), 640, 480);
+            //scene = new Scene(loadFXML("trial"), 640, 480);
+            scene = new Scene(loadFXML("login_page"), 640, 480);
+
             stage.setScene(scene);
-            stage.setTitle("User List");
+            stage.setTitle("LOGIN");
             stage.show();
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Failed to load FXML", e);
@@ -35,7 +37,9 @@ public class StockClientApp extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(StockClientApp.class.getResource("/" + fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StockClientApp.class.getResource("/views/" + fxml + ".fxml"));
+
+
         try {
             return fxmlLoader.load();
         } catch (IOException e) {

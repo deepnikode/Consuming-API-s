@@ -1,5 +1,7 @@
 package com.deep.stockclient;
 
+import com.deep.stockclient.models.ApiResponse;
+import com.deep.stockclient.models.Users;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
@@ -10,7 +12,8 @@ public class WebClientStockClient {
 
     private final WebClient webClient;
 
-    public WebClientStockClient(WebClient webClient) {
+    public WebClientStockClient(WebClient webClient)
+    {
         this.webClient = webClient;
     }
 
