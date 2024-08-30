@@ -12,7 +12,8 @@ public class WebClientStockClient {
 
     private final WebClient webClient;
 
-    public WebClientStockClient(WebClient webClient) {
+    public WebClientStockClient(WebClient webClient)
+    {
         this.webClient = webClient;
     }
 

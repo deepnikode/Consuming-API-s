@@ -2,50 +2,103 @@ package com.deep.stockclient.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@Getter
-@Setter
-public class Users {
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @ToString
+    @Getter
+    @Setter
 
-    @JsonProperty("id")
-    private int id;
+    public class Users
+    {
 
-    @JsonProperty("name")
-    private String name;
+        @JsonProperty("id")
+        private int id;
 
-    @JsonProperty("email")
-    private String email;
+        @JsonProperty("name")
+        private String name;
 
-    @JsonProperty("phone")
-    private String phone;
+        @JsonProperty("employee_code")
+        private String employee_code;
 
-    @JsonProperty("email_verified_at")
-    private String emailVerifiedAt;
+        @JsonProperty("role")
+        private String role;
 
-    @JsonProperty("role")
-    private String role;
+        @JsonProperty("gender")
+        private String gender;
 
-    @JsonProperty("is_active")
-    private boolean isActive;
+        @JsonProperty("email")
+        private String email;
 
-    @JsonProperty("colour_pallate")
-    private String colourPalette;
+        @JsonProperty("personal_email")
+        private String personalEmail;
 
-    @JsonProperty("image")
-    private String image;
+        @JsonProperty("pan_number")
+        private String panNumber;
 
-    @JsonProperty("api_token")
-    private String apiToken;
+        @JsonProperty("adhar_number")
+        private String adharNumber;
 
-    @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+        @JsonProperty("phone")
+        private String phone;
 
-    @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
-}
+        @JsonProperty("alternate_phone")
+        private String alternatePhone;
+
+        @JsonProperty("current_address")
+        private String currentAddress;
+
+        @JsonProperty("permanent_address")
+        private String permanentAddress;
+
+        @JsonProperty("designation")
+        private String designation;
+
+        @JsonProperty("default_salary")
+        private double defaultSalary;
+
+        @JsonProperty("joining_date")
+        private LocalDateTime joiningDate;
+
+        @JsonProperty("date_of_birth")
+        private LocalDateTime dateOfBirth;
+
+        @JsonProperty("email_verified_at")
+        private LocalDateTime emailVerifiedAt;
+
+        @JsonProperty("is_active")
+        private boolean isActive;
+
+        @JsonProperty("colour_pallate")
+        private String colourPalette;
+
+        @JsonProperty("image")
+        private String image;
+
+        @JsonProperty("pan_document")
+        private String panDocument;
+
+        @JsonProperty("adhar_document")
+        private String adharDocument;
+
+        @JsonProperty("api_token")
+        private String apiToken;
+
+        @JsonProperty("created_at")
+        private LocalDateTime createdAt;
+
+        @JsonProperty("updated_at")
+        private LocalDateTime updatedAt;
+
+                    // GETTER-SETTER OF IS_ACTIVE
+                    public boolean isActive() {
+                        return isActive;
+                    }
+
+                    public void setActive(boolean active) {
+                        isActive = active;
+                    }
+    }

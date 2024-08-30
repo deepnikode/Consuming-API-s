@@ -1,6 +1,12 @@
-com/deep/stockclient/UserController.class
-com/deep/stockclient/Users.class
-com/deep/stockclient/config/AppConfig.class
+com/deep/stockclient/controllers/UserController$1.class
+com/deep/stockclient/models/Project.class
+com/deep/stockclient/controllers/UserController.class
+com/deep/stockclient/models/Users.class
+com/deep/stockclient/models/ListApiResponse.class
 com/deep/stockclient/StockClientApp.class
 com/deep/stockclient/WebClientStockClient.class
-com/deep/stockclient/ApiResponse.class
+com/deep/stockclient/controllers/LoginController.class
+com/deep/stockclient/models/ListData.class
+com/deep/stockclient/models/ApiResponse.class
+com/deep/stockclient/models/Assignment.class
+com/deep/stockclient/controllers/LoginController$1.class

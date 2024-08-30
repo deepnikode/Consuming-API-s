@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.datatype.jsr310.*;
+
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -20,11 +22,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.deep.stockclient.models.Users;
 import com.deep.stockclient.models.Project;
-
+@Log4j2
 public class LoginController
 {
 
@@ -47,7 +51,8 @@ public class LoginController
     private static final String LOGIN_API_URL = "http://192.168.1.7:90/api/login";
 
     @FXML
-    private void handleLoginButtonAction() {
+    private void handleLoginButtonAction()
+    {
 
         String email = emailField.getText();
         String password = passwordField.getText();
@@ -67,7 +72,8 @@ public class LoginController
             String jsonInputString = String.format("{\"email\": \"%s\", \"password\": \"%s\"}", email, password);
 
             // Writing the request body
-            try (OutputStream os = conn.getOutputStream()) {
+            try (OutputStream os = conn.getOutputStream())
+            {
                 byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
                 os.write(input, 0, input.length);
             }
@@ -82,7 +88,8 @@ public class LoginController
             }
             logger.info("FULL JSON RESPONSE: {}", responseMessage);
 
-            if (responseCode == 200) {
+            if (responseCode == 200)
+            {
                 ObjectMapper objectMapper = new ObjectMapper();
                 objectMapper.registerModule(new JavaTimeModule());
 
@@ -107,7 +114,8 @@ public class LoginController
 
                 // Loading the new view instead of showing an alert
                 Stage stage = (Stage) emailField.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/user_dashboard.fxml"));
+                //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/user_dashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/trial.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 stage.setScene(scene);
                 stage.setTitle("User Dashboard");
@@ -116,7 +124,12 @@ public class LoginController
                 UserController userController = fxmlLoader.getController();
                 userController.setUserData(user, projects);
 
-            } else {
+
+
+
+
+            }
+            else {
                 // Handle error response
                 ObjectMapper objectMapper = new ObjectMapper();
                 JsonNode rootNode = objectMapper.readTree(responseMessage);
@@ -138,10 +151,18 @@ public class LoginController
                     passwordErrorLabel.setText(String.join(", ", objectMapper.convertValue(errorNode.path("password"), String[].class)));
                 }
             }
-        } catch (Exception e) {
+
+
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
             showAlert("Error", "An error occurred: " + e.getMessage());
-        } finally {
+        }
+
+
+        finally
+        {
             // Clear the password field after an attempt
             passwordField.clear();
         }
@@ -152,6 +173,14 @@ public class LoginController
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    private void showErrorDialog(String errorMessage) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(errorMessage);
         alert.showAndWait();
     }
 }

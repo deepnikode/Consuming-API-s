@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1023.0" prefWidth="2278.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.deep.stockclient.controllers.UserController">
+    <children>
+
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+
+                <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/teamvault.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                 <Label fx:id="nameLabel" textFill="#e7e5e5">
+
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+
+
+
+
+
+                <!--HOME-->
+                <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Home" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/icons8_Home_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+
+
+                <!--PROFILE-->
+                <Button fx:id="btnProfile" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Profile" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/icons8_Person_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+
+
+
+
+
+
+                <!--PROJECTS-->
+                <Button fx:id="btnProjects" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Projects" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/icons8_Xbox_Menu_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+
+
+                <!--SIGN-OUT-->
+                <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Sign Out" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/icons8_Sign_Out_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+
+            </children>
+        </VBox>
+
+
+        <StackPane layoutX="258.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0" style="-fx-background-color: #e7e5e5;">
+
+            <children>
+
+                <Pane fx:id="pnlHome" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0">
+                    <children>
+
+                        <Label layoutX="57.0" layoutY="25.0" text="HOME PAGE" textFill="#000000">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+
+                    </children>
+                </Pane>
+
+
+                <Pane fx:id="pnlProfile" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0">
+                    <children>
+
+<!--                        <Label layoutX="57.0" layoutY="25.0" text="PROFILE PAGE" textFill="#e7e5e5">-->
+<!--                            <font>-->
+<!--                                <Font size="24.0" />-->
+<!--                            </font>-->
+
+<!--                        </Label>-->
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="0.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1035.0">
+                        <content>
+                        <VBox layoutX="56.0" layoutY="89.0" prefHeight="451.0" prefWidth="355.0" spacing="10">
+                            <HBox spacing="10">
+                                <Label text="ID:" />
+                                <Label fx:id="idLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Name:" />
+<!--                                <Label fx:id="nameLabel" />-->
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Employee Code:" />
+                                <Label fx:id="employeeCodeLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Role:" />
+                                <Label fx:id="roleLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Gender:" />
+                                <Label fx:id="genderLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Email:" />
+                                <Label fx:id="emailLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Personal Email:" />
+                                <Label fx:id="personalEmailLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="PAN Number:" />
+                                <Label fx:id="panNumberLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Aadhar Number:" />
+                                <Label fx:id="adharNumberLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Phone:" />
+                                <Label fx:id="phoneLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Alternate Phone:" />
+                                <Label fx:id="alternatePhoneLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Current Address:" />
+                                <Label fx:id="currentAddressLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Permanent Address:" />
+                                <Label fx:id="permanentAddressLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Designation:" />
+                                <Label fx:id="designationLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Default Salary:" />
+                                <Label fx:id="defaultSalaryLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Joining Date:" />
+                                <Label fx:id="joininDateLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Date of Birth:" />
+                                <Label fx:id="dateOfBirthLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Email Verified At:" />
+                                <Label fx:id="emailVerifiedAtLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Active:" />
+                                <Label fx:id="isActiveLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Colour Palette:" />
+                                <Label fx:id="colourPaletteLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Image:" />
+                                <Label fx:id="imageLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="PAN Document:" />
+                                <Label fx:id="panDocumentLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Aadhar Document:" />
+                                <Label fx:id="adharDocumentLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="API Token:" />
+                                <Label fx:id="apiTokenLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Created At:" />
+                                <Label fx:id="createdAtLabel" />
+                            </HBox>
+                            <HBox spacing="10">
+                                <Label text="Updated At:" />
+                                <Label fx:id="updatedAtLabel" />
+                            </HBox>
+                        </VBox>
+                        </content>
+                        </ScrollPane>
+                    </children>
+                </Pane>
+
+
+
+                <Pane fx:id="pnlProjects" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0">
+
+                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="2.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1035.0">
+
+
+                        <VBox>
+                            <TableView fx:id="projectsTableView" layoutX="14.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1030.0" tableMenuButtonVisible="true">
+                                <columns>
+
+                                    <!--<TableColumn fx:id="idColumn" prefWidth="91.0" text="ID" />-->
+                                    <TableColumn fx:id="nameColumn" prefWidth="321.0" text="Name" />
+<!--                                <TableColumn fx:id="startDateColumn" prefWidth="204.0" text="Start Date" />-->
+<!--                                <TableColumn fx:id="activeColumn" prefWidth="179.0" text="Active" />-->
+                                    <TableColumn fx:id="viewColumn" prefWidth="241.0" text="View" />
+
+                                </columns>
+
+                            </TableView>
+                        </VBox>
+
+
+                  <padding>
+                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                  </padding>
+
+                    </ScrollPane>
+
+                </Pane>
+
+
+
+
+                <Pane fx:id="pnlAssignmentCards" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0">
+                    <ScrollPane hbarPolicy="ALWAYS" layoutX="4.0" layoutY="55.0" minHeight="0" minWidth="0" prefHeight="625.0" prefWidth="1020.0" vbarPolicy="ALWAYS">
+                        <content>
+                            <HBox fx:id="taskContainer" alignment="TOP_LEFT"  prefHeight="500.0" prefWidth="1000.0" spacing="18">
+                                <!-- Task cards will be added here -->
+                            </HBox>
+                        </content>
+                        <padding>
+                            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                        </padding>
+                    </ScrollPane>
+                </Pane>
+                  
+
+                <Pane fx:id="pnlSignout" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="2000.0">
+                    <children>
+
+                        <Label layoutX="57.0" layoutY="25.0" text="SIGNOUT PAGE" textFill="#000000">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+      
+                    </children>
+                </Pane>
+
+
+                                    </children>
+
+                                </StackPane>
+
+                            </children>
+                            <effect>
+                                <DropShadow color="#1b1eeb" />
+                            </effect>
+                        </AnchorPane>
